@@ -1,0 +1,2 @@
+Official images for Microsoft SQL Server on Linux for Docker Engine:
+https://hub.docker.com/_/microsoft-mssql-server

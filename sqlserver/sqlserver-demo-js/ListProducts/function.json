@@ -1,0 +1,26 @@
+{
+  "disabled": false,
+  "bindings": [
+    {
+      "authLevel": "anonymous",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "route": "products",
+      "methods": [
+        "get"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "type": "sqlServer",
+      "direction": "in",
+      "name": "products",
+      "query": "SELECT ProductID, Name FROM SalesLT.Product p ORDER BY p.Name"
+    }
+  ]
+}

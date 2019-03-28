@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Serverless.Azure.WebJobs.Extensions.SqlServer</RootNamespace>
+    <AssemblyName>Serverless.Azure.WebJobs.Extensions.SqlServer</AssemblyName>
+    <Authors>Christian Weyer</Authors>
+    <Company>Christian Weyer</Company>
+    <Description>This package contains Azure Functions binding extensions for SQL Server queries.</Description>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Azure WebJobs AzureFunctions SQLServer</PackageTags>
+    <RepositoryUrl>https://github.com/thinktecture/azure-functions-extensibility</RepositoryUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/thinktecture/azure-functions-extensibility</PackageProjectUrl>
+    <PackageLicense>https://github.com/thinktecture/azure-functions-extensibility/blob/master/LICENSE</PackageLicense>
+    <PackageLicenseUrl>https://github.com/thinktecture/azure-functions-extensibility/blob/master/LICENSE</PackageLicenseUrl>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <Version>1.0.0</Version>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="1.60.1" />
+    <PackageReference Include="Microsoft.Azure.WebJobs" Version="3.0.3" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.6.0" />
+  </ItemGroup>
+</Project>

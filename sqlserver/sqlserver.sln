@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sqlserver-extensions", "sqlserver-extensions\sqlserver-extensions.csproj", "{33D157D5-E29F-46B8-B0AF-9B5322877229}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sqlserver-demo", "sqlserver-demo\sqlserver-demo.csproj", "{625D129F-0614-4C72-A81F-D0C8CBC8216A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sqlserver-demo-models", "sqlserver-demo-models\sqlserver-demo-models.csproj", "{646EAF23-53B1-41A5-9D45-B75DAD05885B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{33D157D5-E29F-46B8-B0AF-9B5322877229}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33D157D5-E29F-46B8-B0AF-9B5322877229}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33D157D5-E29F-46B8-B0AF-9B5322877229}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33D157D5-E29F-46B8-B0AF-9B5322877229}.Release|Any CPU.Build.0 = Release|Any CPU
+		{625D129F-0614-4C72-A81F-D0C8CBC8216A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{625D129F-0614-4C72-A81F-D0C8CBC8216A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{625D129F-0614-4C72-A81F-D0C8CBC8216A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{625D129F-0614-4C72-A81F-D0C8CBC8216A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{646EAF23-53B1-41A5-9D45-B75DAD05885B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{646EAF23-53B1-41A5-9D45-B75DAD05885B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{646EAF23-53B1-41A5-9D45-B75DAD05885B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{646EAF23-53B1-41A5-9D45-B75DAD05885B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
