@@ -1,0 +1,31 @@
+{
+	"folders": [
+		{
+			"path": "sqlserver-extensions"
+		},
+		{
+			"path": "sqlserver-demo-js"
+		},
+		{
+			"path": "sqlserver-demo-models"
+		},
+		{
+			"path": "sqlserver-demo"
+		}
+	],
+	"settings": {
+        "debug.internalConsoleOptions": "neverOpen"
+    },
+    "launch": {
+        "configurations": [],
+        "compounds": [
+            {
+                "name": "Attach to both apps",
+                "configurations": [
+                    "Attach to sqlserver-demo",
+                    "Attach to sqlserver-demo-js"
+                ]
+            }
+        ]
+    }
+}

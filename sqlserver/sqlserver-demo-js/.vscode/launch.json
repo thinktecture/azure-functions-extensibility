@@ -2,20 +2,11 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Attach to Node Functions",
+      "name": "Attach to sqlserver-demo-js",
       "type": "node",
       "request": "attach",
-      "port": 9229,
-      "preLaunchTask": "func: host start"
-    },
-    {
-      "type": "node",
-      "request": "attach",
-      "name": "Attach to Remote",
-      "address": "localhost",
-      "port": 7000,
-      "localRoot": "${workspaceFolder}",
-      "remoteRoot": "${workspaceFolder}"
-   }
+      "port": 9228,
+      "preLaunchTask": "func: host start --port 7072"
+    }
   ]
 }
