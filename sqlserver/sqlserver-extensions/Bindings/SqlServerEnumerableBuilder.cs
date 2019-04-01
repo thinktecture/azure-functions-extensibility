@@ -12,7 +12,7 @@ namespace Serverless.Azure.WebJobs.Extensions.SqlServer
     {
         public async Task<IEnumerable<T>> ConvertAsync(SqlServerAttribute input, CancellationToken cancellationToken)
         {
-            var data = new List<T>();
+            List<T> data = null;
 
             using (var connection = new SqlConnection(input.ConnectionString))
             {
@@ -22,7 +22,7 @@ namespace Serverless.Azure.WebJobs.Extensions.SqlServer
                 data = (await connection.QueryAsync<T>(new CommandDefinition(input.Query, parameters))).ToList();
             }
 
-            return data;
+            return data ?? Enumerable.Empty<T>();
         }
     }
 }
