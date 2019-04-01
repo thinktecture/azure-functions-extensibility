@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Serverless.Azure.WebJobs.Extensions.SqlServer
 {
-    public class SqlServerEnumerableBuilder<T> : IAsyncConverter<SqlServerAttribute, IEnumerable<T>> where T : class
+    internal class SqlServerEnumerableBuilder<T> : IAsyncConverter<SqlServerAttribute, IEnumerable<T>> where T : class
     {
         public async Task<IEnumerable<T>> ConvertAsync(SqlServerAttribute input, CancellationToken cancellationToken)
         {

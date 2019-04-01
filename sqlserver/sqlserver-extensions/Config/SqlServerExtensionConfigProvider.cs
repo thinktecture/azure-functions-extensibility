@@ -8,7 +8,7 @@ using System.Collections.Generic;
 namespace Serverless.Azure.WebJobs.Extensions.SqlServer
 {
     [Extension("SqlServer")]
-    public class SqlServerExtensionConfigProvider : IExtensionConfigProvider
+    internal class SqlServerExtensionConfigProvider : IExtensionConfigProvider
     {
         public void Initialize(ExtensionConfigContext context)
         {
