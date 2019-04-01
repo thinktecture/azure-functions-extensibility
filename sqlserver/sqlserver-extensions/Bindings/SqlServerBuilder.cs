@@ -8,16 +8,16 @@ namespace Serverless.Azure.WebJobs.Extensions.SqlServer
 {
     public class SqlServerBuilder<T> : IAsyncConverter<SqlServerAttribute, T> where T : class
     {
-        public async Task<T> ConvertAsync(SqlServerAttribute attribute, CancellationToken cancellationToken)
+        public async Task<T> ConvertAsync(SqlServerAttribute input, CancellationToken cancellationToken)
         {
             var data = default(T);
 
-            using (var connection = new SqlConnection(attribute.ConnectionString))
+            using (var connection = new SqlConnection(input.ConnectionString))
             {
                 var parameters = new DynamicParameters(new { });
-                attribute.SqlParameters.ForEach(param => parameters.Add(param.ParameterName, param.Value));
+                input.SqlParameters.ForEach(param => parameters.Add(param.ParameterName, param.Value));
 
-                data = await connection.QuerySingleAsync<T>(new CommandDefinition(attribute.Query, parameters));
+                data = await connection.QuerySingleAsync<T>(new CommandDefinition(input.Query, parameters));
             }
 
             return data;

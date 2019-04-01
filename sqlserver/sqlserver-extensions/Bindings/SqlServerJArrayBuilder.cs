@@ -15,9 +15,9 @@ namespace Serverless.Azure.WebJobs.Extensions.SqlServer
             _builder = new SqlServerEnumerableBuilder<dynamic>();
         }
 
-        public async Task<JArray> ConvertAsync(SqlServerAttribute attribute, CancellationToken cancellationToken)
+        public async Task<JArray> ConvertAsync(SqlServerAttribute input, CancellationToken cancellationToken)
         {
-            IEnumerable<dynamic> results = (await _builder.ConvertAsync(attribute, cancellationToken));
+            IEnumerable<dynamic> results = (await _builder.ConvertAsync(input, cancellationToken));
 
             return JArray.FromObject(results);
         }
