@@ -8,7 +8,7 @@ namespace Serverless.Azure.WebJobs.Extensions.SqlServer
 {
     internal class SqlServerJArrayBuilder : IAsyncConverter<SqlServerAttribute, JArray>
     {
-        private SqlServerEnumerableBuilder<dynamic> _builder;
+        private readonly SqlServerEnumerableBuilder<dynamic> _builder;
 
         public SqlServerJArrayBuilder()
         {
