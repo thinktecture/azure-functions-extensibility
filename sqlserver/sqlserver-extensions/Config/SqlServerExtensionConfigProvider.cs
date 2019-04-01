@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.Azure.WebJobs.Description;
+﻿using Microsoft.Azure.WebJobs.Description;
 using Microsoft.Azure.WebJobs.Host.Bindings;
 using Microsoft.Azure.WebJobs.Host.Config;
 using Newtonsoft.Json.Linq;
+using System;
+using System.Collections.Generic;
 
 namespace Serverless.Azure.WebJobs.Extensions.SqlServer
 {
@@ -18,9 +18,9 @@ namespace Serverless.Azure.WebJobs.Extensions.SqlServer
             }
 
             var bindingRule = context.AddBindingRule<SqlServerAttribute>();
-            bindingRule.BindToInput<JArray>(typeof(SqlServerJArrayBuilder), this);
-            bindingRule.BindToInput<IEnumerable<OpenType>>(typeof(SqlServerEnumerableBuilder<>), this);
-            bindingRule.BindToInput<OpenType>(typeof(SqlServerBuilder<>), this);
+            bindingRule.BindToInput<JArray>(typeof(SqlServerJArrayBuilder));
+            bindingRule.BindToInput<IEnumerable<OpenType>>(typeof(SqlServerEnumerableBuilder<>));
+            bindingRule.BindToInput<OpenType>(typeof(SqlServerBuilder<>));
         }
     }
 }

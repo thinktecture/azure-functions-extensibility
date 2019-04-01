@@ -1,8 +1,8 @@
+using Microsoft.Azure.WebJobs;
+using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using Microsoft.Azure.WebJobs;
-using Newtonsoft.Json.Linq;
 
 namespace Serverless.Azure.WebJobs.Extensions.SqlServer
 {
@@ -10,15 +10,15 @@ namespace Serverless.Azure.WebJobs.Extensions.SqlServer
     {
         private SqlServerEnumerableBuilder<dynamic> _builder;
 
-        public SqlServerJArrayBuilder(SqlServerExtensionConfigProvider configProvider)
+        public SqlServerJArrayBuilder()
         {
-            _builder = new SqlServerEnumerableBuilder<dynamic>(configProvider);
+            _builder = new SqlServerEnumerableBuilder<dynamic>();
         }
 
         public async Task<JArray> ConvertAsync(SqlServerAttribute attribute, CancellationToken cancellationToken)
         {
             IEnumerable<dynamic> results = (await _builder.ConvertAsync(attribute, cancellationToken));
-            
+
             return JArray.FromObject(results);
         }
     }
