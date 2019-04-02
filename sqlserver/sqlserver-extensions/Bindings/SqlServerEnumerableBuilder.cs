@@ -19,8 +19,8 @@ namespace Serverless.Azure.WebJobs.Extensions.SqlServer
                 var parameters = new DynamicParameters(new { });
                 input.SqlParameters.ForEach(param => parameters.Add(param.ParameterName, param.Value));
 
-                //TODO: Either remove ToList since QueryAsync internally uses a list or change CommandDefinition
-                //      to be not buffered and yield return items.
+                //TODO: Check: Either remove ToList since QueryAsync internally uses a list
+                //      or change CommandDefinition to be not buffered and yield return items.
                 data = (await connection.QueryAsync<T>(new CommandDefinition(input.Query, parameters)).ConfigureAwait(false)).ToList();
             }
 

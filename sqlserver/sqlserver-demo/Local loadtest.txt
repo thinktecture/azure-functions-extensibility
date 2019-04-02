@@ -1,0 +1,3 @@
+wrk -t12 -c200 -d60s http://localhost:7071/api/products
+
+(see https://github.com/wg/wrk)
